@@ -200,6 +200,14 @@ public class DataServiceResource {
     }
 
     @GET
+    @Path("/resourcecatalogs/")
+    public Response getResourceCatalogs() {
+        final List<ResourceCatalog> resourceCatalogs = resourceCatalogService.getResourceCatalogs();
+
+        return Response.ok(resourceCatalogs).build();
+    }
+
+    @GET
     @Path("/k8sresourceschemas/{k8sResourceschemaId}/")
     public Response getK8sResourceschemaById(@PathParam("k8sResourceschemaId") String k8sResourceschemaId) {
         final String k8sResourceSchema = k8sResourceSchemaService.getK8sResourceSchemaById(k8sResourceschemaId);

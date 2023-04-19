@@ -3,9 +3,8 @@ package com.redhat.depdraw.dataservice.dao.file;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import javax.enterprise.context.ApplicationScoped;
-
 import com.redhat.depdraw.dataservice.dao.api.K8SResourceSchemaDao;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class K8SResourceSchemaDaoImpl implements K8SResourceSchemaDao {

@@ -1,15 +1,13 @@
 package com.redhat.depdraw.dataservice.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import com.redhat.depdraw.dataservice.dao.api.LineDao;
-import com.redhat.depdraw.dataservice.dao.model.Diagram;
-import com.redhat.depdraw.dataservice.dao.model.Line;
+import com.redhat.depdraw.model.Diagram;
+import com.redhat.depdraw.model.Line;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class LineService {
@@ -24,7 +22,6 @@ public class LineService {
         UUID uuid = UUID.randomUUID();
         line.setUuid(uuid.toString());
         line.setDiagramID(diagramId);
-        // line.setLineCatalogID(""); //todo Nimer should fix this
 
         final Line createdLine = lineDao.create(line);
 

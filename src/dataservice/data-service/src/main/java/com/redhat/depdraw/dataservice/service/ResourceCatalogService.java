@@ -2,11 +2,10 @@ package com.redhat.depdraw.dataservice.service;
 
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import com.redhat.depdraw.dataservice.dao.api.ResourceCatalogDao;
-import com.redhat.depdraw.dataservice.dao.model.ResourceCatalog;
+import com.redhat.depdraw.model.ResourceCatalog;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class ResourceCatalogService {

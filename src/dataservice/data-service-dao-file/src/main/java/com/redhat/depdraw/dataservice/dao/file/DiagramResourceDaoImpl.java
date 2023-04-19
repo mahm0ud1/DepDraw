@@ -10,12 +10,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.redhat.depdraw.dataservice.dao.api.DiagramResourceDao;
-import com.redhat.depdraw.dataservice.dao.model.DiagramResource;
+import com.redhat.depdraw.model.DiagramResource;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class DiagramResourceDaoImpl implements DiagramResourceDao {
@@ -89,9 +88,7 @@ public class DiagramResourceDaoImpl implements DiagramResourceDao {
             Files.writeString(fileName, definition, StandardOpenOption.WRITE);
         } catch (Exception e) {
             System.out.println("error" + "\n" + definition + "\n" + diagramId + "\n" + diagramResourceId);
-
         }
-
     }
 
     @Override
@@ -100,13 +97,11 @@ public class DiagramResourceDaoImpl implements DiagramResourceDao {
             final String diagramResourcePathString = FileUtil.DIAGRAM_FILES_DIR + diagramId + "/"
                     + FileUtil.DIAGRAM_RESOURCES_FILES_DIR + diagramResourceId + "/";
             Path fileName = Path.of(diagramResourcePathString + FileUtil.DIAGRAM_RESOURCE_DEFINITION_FILE_NAME);
-            String definition = Files.readString(fileName);
-            return definition;
+            return Files.readString(fileName);
         } catch (Exception e) {
             System.out.println("error" + "\n"  + "\n" + diagramId + "\n" + diagramResourceId);
             return null;
         }
-
     }
 
 }

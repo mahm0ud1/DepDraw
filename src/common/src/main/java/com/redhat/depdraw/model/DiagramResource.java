@@ -1,4 +1,4 @@
-package com.redhat.depdraw.dataservice.dao.model;
+package com.redhat.depdraw.model;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -13,14 +13,12 @@ import lombok.ToString;
 @Setter
 @ToString(exclude = "uuid")
 @EqualsAndHashCode(exclude = "uuid")
-public class Line {
+public class DiagramResource {
     private String uuid;
 
+    private String name;
+
+    private String resourceCatalogID;
+
     private String diagramID;
-
-    private String lineCatalogID;
-
-    private String source;
-
-    private String destination;
 }

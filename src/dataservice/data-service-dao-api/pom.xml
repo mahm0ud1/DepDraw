@@ -13,33 +13,11 @@
   <artifactId>data-service-dao-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <properties>
-    <lombok.version>1.18.24</lombok.version>
-  </properties>
-
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-arc</artifactId>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-resteasy</artifactId>-->
-<!--    </dependency>-->
     <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
+      <groupId>com.redhat.depdraw</groupId>
+      <artifactId>common</artifactId>
+      <version>${project.version}</version>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-junit5</artifactId>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>io.rest-assured</groupId>-->
-<!--      <artifactId>rest-assured</artifactId>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
   </dependencies>
 </project>

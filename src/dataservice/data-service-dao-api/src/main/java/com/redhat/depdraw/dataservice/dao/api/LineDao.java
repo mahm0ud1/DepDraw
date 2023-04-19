@@ -2,7 +2,7 @@ package com.redhat.depdraw.dataservice.dao.api;
 
 import java.util.List;
 
-import com.redhat.depdraw.dataservice.dao.model.Line;
+import com.redhat.depdraw.model.Line;
 
 public interface LineDao {
     Line create(Line l);

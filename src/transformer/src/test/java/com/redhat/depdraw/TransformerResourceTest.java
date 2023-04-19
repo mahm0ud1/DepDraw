@@ -82,7 +82,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -141,7 +141,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -197,7 +197,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -256,7 +256,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -316,7 +316,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -382,7 +382,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }
@@ -439,7 +439,7 @@ public class TransformerResourceTest {
                 "}");
 
         given()
-                .when().get("/transform/1111-1111/lines")
+                .when().post("/transform/1111-1111/lines")
                 .then()
                 .statusCode(200);
     }

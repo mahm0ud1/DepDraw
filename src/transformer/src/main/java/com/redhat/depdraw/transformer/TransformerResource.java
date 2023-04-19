@@ -8,12 +8,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.redhat.depdraw.model.Line;
 import com.redhat.depdraw.model.LineCatalog;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
@@ -38,7 +35,7 @@ public class TransformerResource {
         return Response.ok().build();
     }
 
-    @GET
+    @POST
     @Path("/transform/{diagramId}/lines")
     @Produces(MediaType.APPLICATION_JSON)
     public Response transformDiagramLines(@PathParam("diagramId") String diagramId) {

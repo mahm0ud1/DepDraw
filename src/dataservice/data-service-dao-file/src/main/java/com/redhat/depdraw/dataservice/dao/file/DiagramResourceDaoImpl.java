@@ -85,7 +85,7 @@ public class DiagramResourceDaoImpl implements DiagramResourceDao {
             final String diagramResourcePathString = FileUtil.DIAGRAM_FILES_DIR + diagramId + "/"
                     + FileUtil.DIAGRAM_RESOURCES_FILES_DIR + diagramResourceId + "/";
             Path fileName = Path.of(diagramResourcePathString + FileUtil.DIAGRAM_RESOURCE_DEFINITION_FILE_NAME);
-            Files.writeString(fileName, definition, StandardOpenOption.WRITE);
+            Files.writeString(fileName, definition, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (Exception e) {
             System.out.println("error" + "\n" + definition + "\n" + diagramId + "\n" + diagramResourceId);
         }

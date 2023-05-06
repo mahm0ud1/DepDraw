@@ -2,21 +2,16 @@ package com.redhat.depdraw.dataservice;
 
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.core.Response;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
-import org.jboss.resteasy.annotations.Body;
-
-import com.redhat.depdraw.dataservice.dao.model.Diagram;
-import com.redhat.depdraw.dataservice.dao.model.DiagramResource;
-import com.redhat.depdraw.dataservice.dao.model.Line;
-import com.redhat.depdraw.dataservice.dao.model.LineCatalog;
-import com.redhat.depdraw.dataservice.dao.model.ResourceCatalog;
+import com.redhat.depdraw.model.Diagram;
+import com.redhat.depdraw.model.DiagramResource;
+import com.redhat.depdraw.model.Line;
+import com.redhat.depdraw.model.LineCatalog;
+import com.redhat.depdraw.model.ResourceCatalog;
 import com.redhat.depdraw.dataservice.service.DiagramResourceService;
 import com.redhat.depdraw.dataservice.service.DiagramService;
 import com.redhat.depdraw.dataservice.service.K8SResourceSchemaService;
@@ -24,8 +19,6 @@ import com.redhat.depdraw.dataservice.service.LineCatalogService;
 import com.redhat.depdraw.dataservice.service.LineService;
 import com.redhat.depdraw.dataservice.service.ResourceCatalogService;
 
-import io.smallrye.mutiny.subscription.DemandPacer.Request;
-import io.vertx.ext.web.RequestBody;
 
 @Path("/")
 public class DataServiceResource {
@@ -152,7 +145,6 @@ public class DataServiceResource {
         return Response.ok().build();
     }
 
-
     @GET
     @Path("/diagrams/{diagramId}/resources/{diagramResourceId}/schema")
     public Response getDiagramResourceSchemaById(@PathParam("diagramId") String diagramId,
@@ -178,18 +170,18 @@ public class DataServiceResource {
     @GET
     @Path("/diagrams/{diagramId}/resources/{diagramResourceId}/definition")
     public Response getDefinition(@PathParam("diagramId") String diagramId,
-            @PathParam("diagramResourceId") String diagramResourceId, String body) {
+            @PathParam("diagramResourceId") String diagramResourceId) {
         return Response.ok(diagramResourceService.getDiagramResourceDefinition(diagramId, diagramResourceId)).build();
     }
 
     @GET
     @Path("/diagrams/{diagramId}/resources")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getDiagramResources(@PathParam("diagramId") String diagramId) {
         List<DiagramResource> diagramsResources = diagramResourceService.getDiagramResources(diagramId);
 
         return Response.ok(diagramsResources).build();
     }
-
 
     @GET
     @Path("/resourcecatalogs/{resourceCatalogId}/")

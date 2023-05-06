@@ -3,11 +3,10 @@ package com.redhat.depdraw.dataservice.service;
 import java.util.List;
 import java.util.UUID;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import com.redhat.depdraw.dataservice.dao.api.DiagramDao;
-import com.redhat.depdraw.dataservice.dao.model.Diagram;
+import com.redhat.depdraw.model.Diagram;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class DiagramService {

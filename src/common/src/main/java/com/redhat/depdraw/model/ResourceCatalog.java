@@ -1,4 +1,4 @@
-package com.redhat.depdraw.dataservice.dao.model;
+package com.redhat.depdraw.model;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

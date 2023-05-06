@@ -2,7 +2,7 @@ package com.redhat.depdraw.dataservice.dao.api;
 
 import java.util.List;
 
-import com.redhat.depdraw.dataservice.dao.model.LineCatalog;
+import com.redhat.depdraw.model.LineCatalog;
 
 public interface LineCatalogDao {
 

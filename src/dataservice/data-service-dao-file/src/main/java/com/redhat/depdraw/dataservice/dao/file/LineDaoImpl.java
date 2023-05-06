@@ -10,12 +10,12 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.redhat.depdraw.dataservice.dao.api.LineDao;
-import com.redhat.depdraw.dataservice.dao.model.Line;
+import com.redhat.depdraw.model.Line;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class LineDaoImpl implements LineDao {

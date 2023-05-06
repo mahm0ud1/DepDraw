@@ -2,7 +2,7 @@ package com.redhat.depdraw.dataservice.dao.api;
 
 import java.util.List;
 
-import com.redhat.depdraw.dataservice.dao.model.DiagramResource;
+import com.redhat.depdraw.model.DiagramResource;
 
 public interface DiagramResourceDao {
     DiagramResource create(DiagramResource dr);

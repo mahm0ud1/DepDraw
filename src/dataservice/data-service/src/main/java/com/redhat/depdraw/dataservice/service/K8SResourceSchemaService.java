@@ -1,9 +1,8 @@
 package com.redhat.depdraw.dataservice.service;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import com.redhat.depdraw.dataservice.dao.api.K8SResourceSchemaDao;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class K8SResourceSchemaService {
